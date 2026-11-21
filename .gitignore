@@ -231,3 +231,5 @@ __marimo__/
 
 # Confidential sample documents (do not publish)
 data/  tests_bad/
+
+tests_bad/
