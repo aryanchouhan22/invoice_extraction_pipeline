@@ -230,4 +230,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Confidential sample documents (do not publish)
-data/  
+data/  tests_bad/

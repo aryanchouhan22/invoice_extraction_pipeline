@@ -1,0 +1,159 @@
+{
+  "model": "gemini-3.1-flash-lite",
+  "field_accuracy": {
+    "is_invoice": 1.0,
+    "vendor": 1.0,
+    "invoice_number": 1.0,
+    "invoice_date": 1.0,
+    "currency": 1.0,
+    "line_items": 1.0,
+    "tax_total": 1.0,
+    "total": 1.0
+  },
+  "overall": 1.0,
+  "avg_tokens_in": 1432.8,
+  "avg_tokens_out": 398.5,
+  "avg_cost_usd": 0.0014263,
+  "documents": [
+    {
+      "doc": "L01",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L02",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L03",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L04",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L05",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L06",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L07",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L08",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L09",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    },
+    {
+      "doc": "L10",
+      "ok": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "line_items": true,
+        "tax_total": true,
+        "total": true
+      },
+      "status": "ok"
+    }
+  ]
+}

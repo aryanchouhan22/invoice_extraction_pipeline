@@ -1,6 +1,5 @@
 import time
 
-import httpx
 from google import genai
 from google.genai import errors, types
 
@@ -13,7 +12,13 @@ class LLMError(Exception):
 
 
 RETRYABLE = {429, 500, 502, 503, 504}
+NETWORK_ERROR_NAMES = {"TimeoutException", "TransportError", "TimeoutError", "ConnectionError"}
 _client = None
+
+
+def _is_network_error(e):
+    # Match by class name: the SDK may use httpx or a renamed copy of it (httpx2)
+    return any(c.__name__ in NETWORK_ERROR_NAMES for c in type(e).__mro__)
 
 
 def _get_client():
@@ -30,7 +35,6 @@ def _get_client():
 
 def generate(data: bytes, mime: str, user_text: str):
     """Send the file plus prompt to the model. Returns (text, tokens_in, tokens_out)."""
-    # No temperature set on purpose: Gemini 3 models are meant to run at their default.
     cfg = types.GenerateContentConfig(
         system_instruction=SYSTEM_PROMPT,
         response_mime_type="application/json",
@@ -53,7 +57,9 @@ def generate(data: bytes, mime: str, user_text: str):
             last = f"API error {code}: {str(e)[:200]}"
             if code not in RETRYABLE:
                 raise LLMError(last) from e  # 400/401/402/403/404: retrying cannot help
-        except (httpx.TimeoutException, httpx.TransportError) as e:
+        except Exception as e:
+            if not _is_network_error(e):
+                raise LLMError(f"unexpected error: {type(e).__name__}: {str(e)[:200]}") from e
             last = f"network or timeout error: {type(e).__name__}"
 
         if attempt < config.MAX_API_RETRIES:

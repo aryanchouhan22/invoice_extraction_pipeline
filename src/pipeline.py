@@ -68,7 +68,7 @@ def extract_document(path):
         meta["attempts"] = attempt
         try:
             text, tin, tout = llm.generate(data, mime, prompts.user_prompt(previous_problems))
-        except llm.LLMError as e:
+        except Exception as e:
             meta["error"] = str(e)
             break
         meta["tokens_in"] += tin

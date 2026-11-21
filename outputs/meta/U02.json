@@ -1,0 +1,12 @@
+{
+  "file": "U02.jpg",
+  "status": "ok",
+  "needs_review": false,
+  "attempts": 1,
+  "tokens_in": 1882,
+  "tokens_out": 321,
+  "cost_usd": 0.001367,
+  "problems": [],
+  "error": null,
+  "model": "gemini-3.1-flash-lite"
+}

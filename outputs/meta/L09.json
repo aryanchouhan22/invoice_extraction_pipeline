@@ -1,0 +1,12 @@
+{
+  "file": "L09.pdf",
+  "status": "ok",
+  "needs_review": false,
+  "attempts": 1,
+  "tokens_in": 1330,
+  "tokens_out": 328,
+  "cost_usd": 0.001219,
+  "problems": [],
+  "error": null,
+  "model": "gemini-3.1-flash-lite"
+}

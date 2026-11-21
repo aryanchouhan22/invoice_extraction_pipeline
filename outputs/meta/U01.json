@@ -1,0 +1,12 @@
+{
+  "file": "U01.pdf",
+  "status": "ok",
+  "needs_review": false,
+  "attempts": 1,
+  "tokens_in": 1322,
+  "tokens_out": 219,
+  "cost_usd": 0.000944,
+  "problems": [],
+  "error": null,
+  "model": "gemini-3.1-flash-lite"
+}
