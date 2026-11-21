@@ -1,0 +1,45 @@
+
+Model: gemini-3.1-flash-lite   labelled documents: 10
+
+doc   inv?    vendor  number  date    curr    items   tax     total   status        cost$    
+---------------------------------------------------------------------------------------------
+L01   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00072  
+L02   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00102  
+L03   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00075  
+L04   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00236  
+L05   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00115  
+L06   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00076  
+L07   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00072  
+L08   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00043  
+L09   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00082  
+L10   Y       Y       Y       Y       Y       Y       Y       Y       ok            0.00082  
+
+Field-level accuracy
+--------------------------------
+is_invoice      10/10  100.0%
+vendor          10/10  100.0%
+invoice_number  10/10  100.0%
+invoice_date    10/10  100.0%
+currency        10/10  100.0%
+line_items      10/10  100.0%
+tax_total       10/10  100.0%
+total           10/10  100.0%
+line rows       66/66  100.0%  (row-level, paired by order)
+all fields             100.0%
+
+Mismatches
+--------------------------------
+none
+
+Review-flag check
+--------------------------------
+documents with at least one wrong field: 0/10
+documents flagged needs_review or error: 0/10
+wrong documents that were flagged:       0/0
+flagged documents that were all correct: 0/0
+
+Cost (notional, at list price; the free tier bills $0)
+--------------------------------
+total tokens in/out: 14328/3985   API calls: 10
+average per document: 1433 in, 398 out, $0.00096
+prices used: $0.25/1M in, $1.5/1M out
